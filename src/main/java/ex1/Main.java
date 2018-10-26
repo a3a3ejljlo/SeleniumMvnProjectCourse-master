@@ -16,9 +16,17 @@ public class Main {
         List<Figure> list = Arrays.asList(new Circle(10), new Rectangle(10, 10), new Triangle(10, 10, 10));
 
         for (Figure figure : list) {
-            System.out.println("Периметр " + figure.getClass().getSimpleName() + " равен: " + figure.calculatePerimetr());
-            System.out.println("Площадь " + figure.getClass().getSimpleName() + " равна: " + figure.calculateSquare());
-            ;
+            System.err.println("Периметр " + figure.getClass().getSimpleName() + " равен: " + figure.calculatePerimetr());
+            System.err.println("Площадь " + figure.getClass().getSimpleName() + " равна: " + figure.calculateSquare());
+
+
         }
+        exeption();
     }
+
+    public static void  exeption() throws MyExeption {
+        System.out.println("------");
+        throw new MyExeption();
+    }
+
 }

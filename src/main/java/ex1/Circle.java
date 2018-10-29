@@ -10,16 +10,19 @@ public class Circle extends Figure {
     }
 
     public Circle(double radius) {
+        if (radius <= 0) {
+            throw new MyExeption("Некорректное значение");
+        }
         this.radius = radius;
     }
 
     @Override
-    double calculateSquare() {
-        return Math.PI * Math.pow(getRadius(),2);
+    public double calculateSquare() {
+        return Math.PI * Math.pow(getRadius(), 2);
     }
 
     @Override
-    double calculatePerimetr() {
+    public double calculatePerimetr() {
         return 2 * Math.PI * getRadius();
     }
 }

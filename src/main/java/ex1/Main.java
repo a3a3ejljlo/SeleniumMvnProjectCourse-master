@@ -26,7 +26,7 @@ public class Main {
 
     public static void  exeption() throws MyExeption {
         System.out.println("------");
-        throw new MyExeption();
+        throw new MyExeption("Некорректное значение");
     }
 
 }

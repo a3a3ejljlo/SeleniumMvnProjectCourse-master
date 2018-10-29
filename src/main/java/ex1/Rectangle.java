@@ -6,16 +6,19 @@ public class Rectangle extends Figure {
     private double length;
 
     public Rectangle(double width, double length) {
+        if (width <= 0 || length <=0) {
+            throw new MyExeption("Некорректное значение");
+        }
         this.width = width;
         this.length = length;
     }
 
-    private double getWidth() {
+    public double getWidth() {
         return width;
     }
 
 
-    private double getLength() {
+    public double getLength() {
         return length;
     }
 

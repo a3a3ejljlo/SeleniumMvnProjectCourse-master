@@ -6,7 +6,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.fail;
+import static org.junit.Assert.assertThat;
 
 public class CircleExtensionTest {
 
@@ -27,12 +29,22 @@ public class CircleExtensionTest {
 
 
     @Test
-    public void trainExeption() {
+    public void trainExeptionCalculateSquare() {
         try {
-            new Circle(0);
-            fail("Некорректное исключение");
+            new Circle(0).calculateSquare();
+            fail("Expected an MyExeption to be thrown");
         } catch (MyExeption exeption) {
-            System.out.println("Ожидаемое значение");
+            assertThat(exeption.getMessage(), is("Некорректное значение"));
+        }
+    }
+
+    @Test
+    public void trainExeptionCalculatePerimetr() {
+        try {
+            new Circle(0).calculatePerimetr();
+            fail("Expected an MyExeption to be thrown");
+        } catch (MyExeption exeption) {
+            assertThat(exeption.getMessage(), is("Некорректное значение"));
         }
     }
 

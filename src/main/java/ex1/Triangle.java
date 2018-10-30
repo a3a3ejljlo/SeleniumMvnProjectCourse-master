@@ -31,13 +31,13 @@ public class Triangle extends Figure {
 
 
     @Override
-    double calculateSquare() {
+    public double calculateSquare() {
         double halfOfPerimeter = calculatePerimetr() / 2;
         return Math.sqrt(halfOfPerimeter * (halfOfPerimeter - getWight() * (halfOfPerimeter - getLenght() * (halfOfPerimeter - getHeight()))));
     }
 
     @Override
-    double calculatePerimetr() {
+    public double calculatePerimetr() {
         return getHeight() + getLenght() + getWight();
     }
 }

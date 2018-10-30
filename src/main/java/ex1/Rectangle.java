@@ -13,6 +13,15 @@ public class Rectangle extends Figure {
         this.length = length;
     }
 
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+                '}';
+    }
+
     public double getWidth() {
         return width;
     }
@@ -24,12 +33,12 @@ public class Rectangle extends Figure {
 
 
     @Override
-    double calculateSquare() {
+    public double calculateSquare() {
         return getLength() * getWidth();
     }
 
     @Override
-    double calculatePerimetr() {
+    public double calculatePerimetr() {
         return 2 * (getLength() + getWidth());
     }
 }

@@ -1,6 +1,7 @@
 package ex2;
 
 import ex1.Circle;
+import ex1.Triangle;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +15,7 @@ public class ParametrsTestForFigure {
 
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][]{{2,2,4},{1, 2, 3}
+        return Arrays.asList(new Object[][]{{2,2,4,8},{1, 2, 3,6},{10,12,12,34}
         });
     }
 
@@ -25,11 +26,14 @@ public class ParametrsTestForFigure {
     public double number2;
 
     @Parameterized.Parameter(2)
+    public double number3;
+
+    @Parameterized.Parameter(3)
     public double result;
 
     @Test
     public void testMethod() {
-        Assert.assertEquals(result, new Circle(0));
+        Assert.assertEquals(result, new Triangle(number1,number2,number3).calculatePerimetr(),0);
     }
 
 }

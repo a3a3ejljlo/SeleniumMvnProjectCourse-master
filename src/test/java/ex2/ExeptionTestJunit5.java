@@ -5,10 +5,10 @@ import ex1.MyExeption;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ExeptionTest {
+public class ExeptionTestJunit5 {
 
     @Test
-    void additionTest() {
+    void calcPerimetrCircleTest() {
         Throwable exeption = Assertions.assertThrows(MyExeption.class, () -> new Circle(0).calculatePerimetr());
         Assertions.assertEquals("Некорректные значения", exeption.getMessage());
     }

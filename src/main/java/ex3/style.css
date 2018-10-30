@@ -1,0 +1,26 @@
+ul li {
+  color: red;
+}
+li.c0 {
+  color: red;
+}
+
+li.c1 {
+  color: fuchsia;
+}
+
+ol li {
+  color: darkgreen;
+}
+
+h2 {
+     color: blue;
+}
+
+th {
+background: DimGrey;
+}
+
+tr:nth-child(2n) {
+background: silver	;
+}

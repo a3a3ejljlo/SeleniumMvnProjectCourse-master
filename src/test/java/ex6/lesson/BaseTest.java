@@ -1,4 +1,4 @@
-package ex6;
+package ex6.lesson;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,9 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by Maria on 06.05.2017.
- */
 public class BaseTest {
     WebDriverWait wait;
     private static WebDriver driver;

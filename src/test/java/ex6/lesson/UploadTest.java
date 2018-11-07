@@ -1,4 +1,4 @@
-package ex6;
+package ex6.lesson;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

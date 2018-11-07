@@ -1,0 +1,68 @@
+1.  пункт меню - Карты
+//a[@class = 'main-menu__link' and text()='Карты']
+
+2.  все пункты верхнего меню – (Для жизни, малому бизнесу)
+//ul[@class='sec-menu']//a[@class='sec-menu__link']
+
+3.  Валютно - обменные операции, кнопка - Подробнее (Корпоративному бизнесу )
+//h2[text()='Валютно-обменные операции']/../following-sibling::div[contains(text(), 'Подробнее')]
+
+4.   Малый бизнес - Подробнее(На главной странице) // малому не было
+//h2[text()='Получить кредит']/../following-sibling::div[contains(text(), 'Подробнее')]
+
+5.  Рефинансирование Ипотеки - Консультация и подача заявки - Оставить заявку
+//div[@class = 'accordion__body-left']//a[@class = 'button' and text() = 'Оставить заявку']
+
+6.   значение максимальной суммы
+//p[contains(text(),'максимальная сумма')]/..//descendant::p[1]
+
+7.  Мы позаботимся о вашей ипотеке - Оставить заявку -
+//*[contains(text(),'Мы позаботимся')]/..//following-sibling::a[contains(text(), 'Оставить заявку')]
+
+8.  Одобрение объекта //не получилось, почему то не ищет
+//*[@class = 'accordion__section accordion__section--opened']//descendant::h2[contains(text(),'Одобрение')]
+
+9.  Срок кредитования
+//p[contains(text(),'срок кредитования')]/..//descendant::p[1]
+
+10.  Требования к заемщику
+//li[contains(text(),'Требования к заемщику')]
+
+--------------------------------------------------------------
+1.	Зайти на Яндекс Билеты
+//div[@role = 'menuitem']//a[text()='Авиабилеты']
+
+2.	Поле откуда
+//input[@name = 'fromName']
+
+3.	Найти
+//span[text()='Найти']
+
+4.	Список элементов меню
+//div[@class='offers-tabs_kb__tabs']//a[contains(@class,'offers-tabs_kb__')]
+
+5.	Элемент меню, который выбран в данный момент, без привязки к тексту
+//a[@class = 'offers-tabs_kb__tab _current']
+
+На 2-ом скриншоте:
+1.	Откуда
+//input[@class = 'city-input_kb-large__control' and @name = 'from']
+
+2.	Куда
+//input[@class = 'city-input_kb-large__control' and @name = 'to']
+
+3.	Количество билетов
+//input[@class = 'y-input_islet-large__control' and @name = 'options']
+
+4.	Кнопка переслать ссылку
+//span[@class = 'share__icon']
+
+5.	Найти все варианты в которых есть авиакомпания S7 Airlines
+//span[contains(text(), 'S7 Airlines')]//ancestor::tbody[@class='flight_list _init']
+
+6.	Найти значение цены для всех вариантов с S7 Airlines
+//span[contains(text(), 'S7 Airlines')]//ancestor::tbody[@class='flight_list _init']//span[@class='price_kb _init']
+
+7.	Найти значения кнопки купить для всех вариантов S7 Airlines
+//span[contains(text(), 'S7 Airlines')]//ancestor::tbody[@class='flight_list _init']//span[@class='y-button__text']
+

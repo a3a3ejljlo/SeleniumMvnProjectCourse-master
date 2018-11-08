@@ -1,9 +1,10 @@
-package ex6.lesson;
+package ex7;
 
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,9 +21,12 @@ public class BaseTest {
     @Before
     public void startScenario() {
         System.setProperty("webdriver.chrome.driver", "drv/chromedriver.exe");
-        driver = new ChromeDriver();
-        wait  = new WebDriverWait(driver, 5);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("start-maximized");
+        options.setExperimentalOption("useAutomationExtension", false);
 
+        driver = new ChromeDriver(options);
+        wait = new WebDriverWait(driver,60);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -64,6 +68,9 @@ public class BaseTest {
         } finally {
             getDriver().manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         }
+    }
+
+    public String getText(WebElement element){ return wait.until(ExpectedConditions.visibilityOf(element)).getText();
     }
 
 

@@ -1,4 +1,4 @@
-package ex6.lesson.homework;
+package ex6.homework;
 
 import org.junit.After;
 import org.junit.Before;

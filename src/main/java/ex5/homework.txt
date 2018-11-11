@@ -21,6 +21,7 @@
 
 8.  Одобрение объекта //не получилось, почему то не ищет
 //*[@class = 'accordion__section accordion__section--opened']//descendant::h2[contains(text(),'Одобрение')]
+//h2[contains(text()[2],'Одобрение')]/ancestor::div[@class = 'accordion__head']
 
 9.  Срок кредитования
 //p[contains(text(),'срок кредитования')]/..//descendant::p[1]

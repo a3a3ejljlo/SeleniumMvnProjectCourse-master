@@ -1,4 +1,4 @@
-package ex7;
+package ex7.lesson;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class LessonTest1 extends BaseTest {
         click(driver.findElement(By.xpath("//*[text()='Клиенту банка']/..")));
         selectInput(driver.findElement(By.xpath("//c-select")), "Мой счет в рублях");
         click(driver.findElement(By.xpath("//*[text() = 'По номеру телефона']")));
-        fillField(driver.findElement(By.xpath("//c-input-phone/input[contains(@class,'c-input-phone__input')]")), "78988989988");
+        fillField(driver.findElement(By.xpath("//c-input-phone/input[contains(@class,'c-input-phone__input')]")), "79122322423");
 
         Assert.assertEquals("Сидоров П.И.", driver.findElement(By.xpath("//label[text()='ФИО получателя']/../following-sibling::div//div")).getText());
 
@@ -38,16 +38,18 @@ public class LessonTest1 extends BaseTest {
 
         fillField(driver.findElement(By.xpath(" //ruble-transfer-form-amount//input")), "100");
 
+        Assert.assertEquals("0,00 \u20BD", driver.findElement(By.xpath("//label[text() = 'Комиссия']/parent::div//following-sibling::div//amount[@class= 'c-amount c-amount_inline ng-star-inserted']")).getText());
 
-        fillField(driver.findElement(By.xpath("//textarea[@class='c-textarea c-input ng-pristine ng-valid ng-touched']")), "100");
+
+        fillField(driver.findElement(By.xpath("//div[@class='rc-row__value']/textarea")), "test");
 
 
         click(getDriver().findElement(By.xpath("//span[@class = 'ng-star-inserted'][text() = 'Перевести']")));
 
-        Assert.assertEquals("79101231233", getText(driver.findElement(By.xpath("//div[@class = 'confirm-operation__attribute-label'][text() = 'По номеру телефона:']/following-sibling::div[@class = 'confirm-operation__attribute-value']"))));
-        Assert.assertEquals("Сидоров Петр Иванович", getText(driver.findElement(By.xpath("//div[@class = 'confirm-operation__attribute-label'][text() = 'ФИО получателя:']/following-sibling::div[@class = 'confirm-operation__attribute-value']"))));
-        Assert.assertEquals("100,00 \u20BD", getText(driver.findElement(By.xpath("//div[@class = 'confirm-operation__attribute-label'][text() = 'Сумма перевода:']/following-sibling::div[@class = 'confirm-operation__attribute-value']"))));
-
+        Assert.assertEquals("79122322423", getText(driver.findElement(By.xpath("//div[text() = 'По номеру телефона:']/following-sibling::div"))));
+        Assert.assertEquals("Сидоров Петр Иванович", getText(driver.findElement(By.xpath("//div[text() = 'ФИО получателя:']/following-sibling::div"))));
+        Assert.assertEquals("100,00 \u20BD", getText(driver.findElement(By.xpath("//div[text() = 'Сумма перевода:']/following-sibling::div"))));
+        Assert.assertEquals("Комиссия не взимается", getText(driver.findElement(By.xpath("//div[text()='Комиссия']/following-sibling::div"))));
 
 
     }

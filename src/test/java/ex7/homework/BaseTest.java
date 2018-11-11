@@ -1,4 +1,4 @@
-package ex7;
+package ex7.homework;
 
 import org.junit.After;
 import org.junit.Before;
@@ -26,7 +26,7 @@ public class BaseTest {
         options.setExperimentalOption("useAutomationExtension", false);
 
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver,60);
+        wait = new WebDriverWait(driver,10);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -49,14 +49,10 @@ public class BaseTest {
 
 
     public void fillField(WebElement element, String value) {
+
         element.clear();
         element.sendKeys(value);
         element.sendKeys(Keys.TAB);
-    }
-
-    public void selectInput(WebElement element, String value) {
-        element.click();
-        element.findElement(By.xpath(".//div[contains(@class,'choices__item')][contains(text(),'" + value + "')]")).click();
     }
 
     public boolean isElementPresent(By locator) {

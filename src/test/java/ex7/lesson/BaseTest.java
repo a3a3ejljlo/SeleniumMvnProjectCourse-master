@@ -1,4 +1,4 @@
-package ex6.homework;
+package ex7.lesson;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,15 +47,6 @@ public class BaseTest {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
-    public void scrollToEndPage(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("return arguments[0].scrollIntoView(false);", element);
-    }
-
-    public void selectInput(WebElement element, String value) {
-        element.click();
-        click(element.findElement(By.xpath("//*[text()='" + value + "']")));
-    }
 
     public void fillField(WebElement element, String value) {
 

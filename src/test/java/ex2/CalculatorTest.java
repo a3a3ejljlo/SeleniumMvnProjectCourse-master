@@ -16,7 +16,7 @@ public class CalculatorTest {
         System.out.println("Before each");
     }
 
-    @Test
+    @Test @Ignore
     @DisplayName("Проверка операции сложения")
     void testMethod() {
         Addition addition = new Addition(3, 4);

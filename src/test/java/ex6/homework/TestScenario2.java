@@ -12,14 +12,14 @@ package ex6.homework;
 * */
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class TestScenario2 extends BaseTest {
 
-    @Test
+    @Test @Ignore
     public void testTemplate() {
 
 

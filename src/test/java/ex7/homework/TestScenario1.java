@@ -15,7 +15,7 @@ package ex7.homework;
 * */
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class TestScenario1 extends BaseTest {
 
-    @Test
+    @Test @Ignore
     public void testMetod() {
 
         WebDriver driver = getDriver();
@@ -39,7 +39,7 @@ public class TestScenario1 extends BaseTest {
         fillField(driver.findElement(By.xpath("//input[@placeholder='Отчество']")),"Иванович");
         fillField(driver.findElement(By.xpath("//input[@placeholder='Дата Рождения']")),"01.01.1990");
         fillField(driver.findElement(By.xpath("//input[@sys_name='phone']")),"9999999999");
-        fillField(driver.findElement(By.xpath("//input[@placeholder='Электронная почта']")),"test@test.ru");
+        fillField(driver.findElement(By.xpath("//input[@placeholder='Электронная почта']")),"test@Test @Ignore.ru");
         click(driver.findElement(By.xpath("//span[@class='checkbox-block__span']")));
         fillField(driver.findElement(By.xpath("//input[@placeholder='Проверочный код']")),"1111");
         isElementPresent(By.xpath("//div[@class='b-block-row__submit']//button[@class='button' and contains(text(),'Отправить')]"));

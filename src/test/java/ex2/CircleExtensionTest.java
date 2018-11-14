@@ -3,7 +3,7 @@ package ex2;
 import ex1.Circle;
 import ex1.MyExeption;
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -15,20 +15,20 @@ public class CircleExtensionTest {
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
-    @Test
+    @Test @Ignore
     public void testRule() {
         expectedException.expect(MyExeption.class);
         expectedException.expectMessage("Некорректное значение");
         new Circle(0);
     }
 
-    @Test(expected = MyExeption.class)
+    @Test @Ignore(expected = MyExeption.class)
     public void circleTest() {
         new Circle(0);
     }
 
 
-    @Test
+    @Test @Ignore
     public void trainExeptionCalculateSquare() {
         try {
             new Circle(0).calculateSquare();
@@ -38,7 +38,7 @@ public class CircleExtensionTest {
         }
     }
 
-    @Test
+    @Test @Ignore
     public void trainExeptionCalculatePerimetr() {
         try {
             new Circle(0).calculatePerimetr();

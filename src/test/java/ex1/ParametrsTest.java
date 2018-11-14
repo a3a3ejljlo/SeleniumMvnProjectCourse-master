@@ -1,7 +1,7 @@
 package ex1;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -26,7 +26,7 @@ public class ParametrsTest {
     @Parameterized.Parameter(2)
     public double result;
 
-    @Test
+    @Test @Ignore
     public void testMethod() {
         Assert.assertEquals(result,new Addition(number1,number2).calcResult(),0);
     }

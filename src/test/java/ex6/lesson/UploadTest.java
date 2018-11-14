@@ -1,6 +1,6 @@
 package ex6.lesson;
 
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ import java.io.File;
 public class UploadTest extends BaseTest {
 
 
-    @Test
+    @Test @Ignore
     public void testUpload() {
         WebDriver driver = getDriver();
         driver.get("https://www.freeformatter.com/xml-formatter.html");

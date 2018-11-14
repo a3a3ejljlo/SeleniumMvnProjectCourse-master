@@ -3,11 +3,11 @@ package ex2;
 import ex1.MyExeption;
 import ex1.Rectangle;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class RectangleTestJunit5 {
 
-    @Test
+    @Test @Ignore
     void calculatePerimeterTest() {
         Throwable exception = Assertions.assertThrows(MyExeption.class,
                 () -> {

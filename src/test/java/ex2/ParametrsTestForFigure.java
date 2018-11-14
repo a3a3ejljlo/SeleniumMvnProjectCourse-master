@@ -3,7 +3,7 @@ package ex2;
 import ex1.Circle;
 import ex1.Triangle;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
@@ -31,7 +31,7 @@ public class ParametrsTestForFigure {
     @Parameterized.Parameter(3)
     public double result;
 
-    @Test
+    @Test @Ignore
     public void testMethod() {
         Assert.assertEquals(result, new Triangle(number1,number2,number3).calculatePerimetr(),0);
     }

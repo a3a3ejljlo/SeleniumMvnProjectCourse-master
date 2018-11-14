@@ -1,7 +1,7 @@
 package ex7.lesson;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LessonTest1 extends BaseTest {
 
-    @Test
+    @Test @Ignore
     public void testMetod() {
 
         WebDriver driver = getDriver();

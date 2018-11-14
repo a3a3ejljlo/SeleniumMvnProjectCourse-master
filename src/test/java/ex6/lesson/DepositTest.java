@@ -1,7 +1,7 @@
 package ex6.lesson;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ public class DepositTest extends BaseTest {
 
 
 
-    @Test
+    @Test @Ignore
     public void testDeposit() {
         HashMap<String, String> testData = new HashMap<>();
         testData.put("Фамилия", "Иванов");

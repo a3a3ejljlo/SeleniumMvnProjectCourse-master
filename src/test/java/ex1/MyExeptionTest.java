@@ -5,7 +5,7 @@ import org.junit.*;
 
 public class MyExeptionTest {
 
-    @Test @Ignore(expected = MyExeption.class)
+    @Test(expected = MyExeption.class)
     public void testExeption() {
         Main main = new Main();
         main.main(null);

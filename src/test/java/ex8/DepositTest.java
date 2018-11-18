@@ -14,7 +14,6 @@ public class DepositTest extends BaseTest {
 
 
     @Test @Ignore
-    @Ignore
     public void testDeposit() {
         HashMap<String, String> testData = new HashMap<>();
         testData.put("Фамилия", "Иванов");

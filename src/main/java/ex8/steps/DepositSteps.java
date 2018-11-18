@@ -43,11 +43,11 @@ public class DepositSteps {
         depositPage.selectInput(element,value);
     }
 
-    public void checkFieldIsPresent(String name) throws Exception {
-        try {
-            DriverManager.getDriver().manage().timeouts().implicitlyWait(2, )
-        }
-    }
+//    public void checkFieldIsPresent(String name) throws Exception {
+//        try {
+//            DriverManager.getDriver().manage().timeouts().implicitlyWait(2, )
+//        }
+//    }
 
 
 }

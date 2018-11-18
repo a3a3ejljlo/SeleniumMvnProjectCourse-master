@@ -48,7 +48,7 @@ public class MyStepTest extends BaseSteps {
 
         depositSteps.selectInput("Город", testData.get("Город"));
         depositSteps.selectInput("Отделение банка", testData.get("Отделение банка"));
-        depositSteps.
+//        depositSteps.
     }
 
 }
